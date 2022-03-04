@@ -58,3 +58,22 @@ if (place_meeting(x, y + vsp, oGround))
 }
 y = y + vsp;
 
+//Animation
+
+if (hsp)
+{
+	sprite_index = sPlayer_run;
+}
+else if (hsp < 0)
+{
+	sprite_index = sPlayer_run;
+}
+else
+{
+	sprite_index = sPlayer_idle;
+}
+
+if (hsp != 0)
+{
+	image_xscale = sign(hsp);
+}
